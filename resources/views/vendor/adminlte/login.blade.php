@@ -2,6 +2,15 @@
 
 @section('adminlte_css')
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    <!-- <style>
+        html, body {
+                background-color: #941611 !important;
+                color: #fff !important;
+            }
+            .login-logo{
+                background: #fff !important;
+            }
+    </style> -->
     @yield('css')
 @stop
 

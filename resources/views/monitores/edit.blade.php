@@ -36,8 +36,8 @@
                         <select name="disciplina" id="disciplina" class="form-control" required >
                             <option value=""disabled selected>-- Escolha --</option>
                             <option value="Analise e Desenvolvimento de Sistemas">Análise e Desenv. de Sistemas</option>
-                            <option value="Eletronica Automotiva">Eletronônica Automotiva</option>
-                            <option value="RH">RH</option>
+                            <option value="Eletrônica Automotiva">Eletronônica Automotiva</option>
+                            <option value="Gestão de Recursos Humanos">RH</option>
                         </select>
                         <!-- <input type="email" name="email" id="email" class="form-control"> -->
                     </div>
