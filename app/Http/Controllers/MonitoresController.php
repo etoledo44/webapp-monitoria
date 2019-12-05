@@ -22,4 +22,30 @@ class MonitoresController extends Controller
         Monitores::create($request->all());
         return redirect()->route('monitores.index');
     }
+    public function edit($id)
+    {
+        $monitores = Monitores::find($id);
+        return view('monitores.edit',compact('monitores'));
+    }
+    
+    public function update(Request $request, $id)
+    {
+        DB::table('monitores')
+            ->where('id', $id)
+            ->update([
+                'nome'=>$request->nome,
+                'email'=>$request->email,
+                'disciplina'=>$request->disciplina,
+                'horaDe'=>$request->horaDe,
+                'horaAte'=>$request->horaAte
+            ]);
+
+        return redirect()->route('monitores.index');
+    }
+
+    public function destroy($id)
+    {
+        Monitores::destroy($id);
+        return redirect()->route('monitores.index');
+    }
 }

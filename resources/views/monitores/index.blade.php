@@ -22,6 +22,8 @@
                         <th>ID</th>
                         <th>Nome</th>
                         <th>E-mail</th>
+                        <th>Disciplina monitorada</th>
+                        <th>Horários</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -31,15 +33,18 @@
                         <td>{{ $monitor->id}}</td>
                         <td>{{ $monitor->nome}}</td>
                         <td>{{ $monitor->email}}</td>
+                        <td>{{ $monitor->disciplina}}</td>
+                        <td>De {{ $monitor->horaDe}} às {{ $monitor->horaAte}}</td>
                         <td>
                             <!-- Botão de visualização -->
-                            <a href="" class="btn btn-primary btn-xs"><i class="fas fa-fx fa-eye"></i></a>
+                            <!-- <a href="" class="btn btn-primary btn-xs"><i class="fas fa-fx fa-eye"></i></a> -->
                             <!-- Botão de edição -->
-                            <a href="" class="btn btn-warning btn-xs"><i class="fas fa-fx fa-pencil-alt"></i></a>
+                            <a href="{{ route('monitores.edit', $monitor->id) }}" class="btn btn-warning btn-xs"><i class="fas fa-fx fa-pencil-alt"></i></a>
                             <!-- Botão de exclusão | envia um formulário ao invés de link -->
-                            <form action="" method="POST" onsubmit="return confirm('Você tem certeza que deseja excluir este registro?');" style="display: inline-block;">
+                            
+                            <form action="{{ route('monitores.destroy', $monitor->id) }}" method="get" onsubmit="return confirm('Você tem certeza que deseja excluir este registro?');" style="display: inline-block;">
                             <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-danger btn-xs"><i class="fas fa-fx fa-trash-alt"></i></button>
                             </form>
                         </td>

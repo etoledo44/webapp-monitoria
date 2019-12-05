@@ -5,6 +5,6 @@ class Monitores extends Model
 {
     protected $table="monitores";
     protected $fillable = [
-        'nome', 'email'
+        'nome', 'email', 'disciplina', 'horaDe', 'horaAte'
     ];
 }

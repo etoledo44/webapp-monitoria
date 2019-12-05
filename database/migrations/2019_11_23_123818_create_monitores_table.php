@@ -17,6 +17,9 @@ class CreateMonitoresTable extends Migration
             $table->increments('id');
             $table->string('nome', 50);
             $table->string('email', 50)->unique();
+            $table->string('disciplina', 50);
+            $table->string('horaDe', 50);
+            $table->string('horaAte', 50);
             $table->timestamps();
         });
     }

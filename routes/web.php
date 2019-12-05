@@ -38,5 +38,8 @@ Route::group(['prefix' => 'monitores'], function(){
     Route::get('/', 'MonitoresController@index')->name('monitores.index');
     Route::get('/criar', 'MonitoresController@create')->name('monitores.create');
     Route::post('/criar', 'MonitoresController@store')->name('monitores.store');
+    Route::get('/deletar/{id}', 'MonitoresController@destroy')->name('monitores.destroy');
+    Route::get('/editar/{id}', 'MonitoresController@edit')->name('monitores.edit');
+    Route::put('/update/{id}', 'MonitoresController@update')->name('monitores.update');
 
 });
