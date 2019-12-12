@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'Registrar',
+    'title' => 'Login',
 
     'title_prefix' => '',
 
